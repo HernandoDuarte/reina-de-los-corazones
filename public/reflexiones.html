@@ -1,0 +1,27 @@
+ <!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reflexión Mariana Diaria - Corazones de María</title>
+  <style>
+    body { font-family: Arial, sans-serif; text-align: center; padding: 20px; }
+    h1 { color: #4a4a8a; }
+    p { font-size: 1.2em; max-width: 600px; margin: 20px auto; }
+  </style>
+</head>
+<body>
+  <h1>Reflexión Mariana Diaria</h1>
+  <p id="reflection">Cargando...</p>
+  <script>
+    fetch('/api/reflection')
+      .then(response => response.json())
+      .then(data => {
+        document.getElementById('reflection').textContent = data.reflection;
+      })
+      .catch(error => {
+        document.getElementById('reflection').textContent = 'Error al cargar la reflexión.';
+      });
+  </script>
+</body>
+</html>
