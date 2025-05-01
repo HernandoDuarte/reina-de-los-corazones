@@ -3,96 +3,61 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Corazones de María - En Honor a la Virgen María</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Corazones de María</title>
   <style>
-    body { scroll-behavior: smooth; }
-    .hero-bg { background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/assets/virgen-maria.jpg'); }
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; text-align: center; }
+    header { background-color: #f0f8ff; padding: 20px; }
+    header img { max-width: 100%; height: auto; }
+    section { padding: 20px; }
+    h2 { color: #4a4a8a; }
+    footer { background-color: #f0f8ff; padding: 10px; margin-top: 20px; }
+    a { color: #4a4a8a; text-decoration: none; font-weight: bold; }
+    a:hover { text-decoration: underline; }
   </style>
 </head>
-<body class="bg-gray-100 font-sans text-gray-800">
-  <!-- Encabezado -->
-  <header class="hero-bg bg-cover bg-center text-white py-20 text-center">
-    <h1 class="text-4xl md:text-5xl font-bold mb-4">Corazones de María</h1>
-    <p class="text-lg md:text-xl mb-6">Un espacio para acercarte a Jesús a través de la Virgen María</p>
-    <a href="#rosario" class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-6 rounded-full text-lg">Reza el Rosario</a>
+<body>
+  <header>
+    <h1>Corazones de María</h1>
+    <img src="assets/virgen-maria.jpg" alt="Virgen María" width="300">
   </header>
-
-  <!-- Navegación -->
-  <nav class="bg-white shadow sticky top-0 z-10">
-    <ul class="flex justify-center space-x-4 md:space-x-8 py-4">
-      <li><a href="#rosario" class="text-blue-600 hover:text-blue-800 font-medium">Santo Rosario</a></li>
-      <li><a href="#apariciones" class="text-blue-600 hover:text-blue-800 font-medium">Apariciones Marianas</a></li>
-      <li><a href="#plan-mariano" class="text-blue-600 hover:text-blue-800 font-medium">Plan Mariano</a></li>
-    </ul>
-  </nav>
-
-  <!-- Sección: Santo Rosario -->
-  <section id="rosario" class="py-12 px-4 md:px-8">
-    <div class="max-w-4xl mx-auto text-center">
-      <h2 class="text-3xl font-bold text-blue-800 mb-6">El Santo Rosario</h2>
-      <p class="text-lg mb-4">El Rosario es una oración poderosa que nos une a Jesús a través de los misterios de su vida, vistos desde el corazón de María.</p>
-      <img src="/assets/rosario.jpg" alt="Santo Rosario" class="mx-auto my-6 rounded-lg shadow-md max-w-xs">
-      <p class="text-md">Reza los misterios Gozosos, Dolorosos, Gloriosos y Luminosos para meditar en la vida de Cristo.</p>
-      <a href="/rosario.html" class="inline-block mt-4 bg-blue-600 hover:bg-blue-700 text-white py-2 px-6 rounded-full">Guía para Rezar el Rosario</a>
-    </div>
+  <section id="rosario">
+    <h2>El Santo Rosario</h2>
+    <p>Reza el Rosario para acercarte a Jesús a través de María.</p>
+    <img src="assets/rosario.jpg" alt="Rosario" width="200">
   </section>
-
-  <!-- Sección: Apariciones Marianas -->
-  <section id="apariciones" class="bg-white py-12 px-4 md:px-8">
-    <div class="max-w-4xl mx-auto">
-      <h2 class="text-3xl font-bold text-blue-800 mb-6 text-center">Apariciones Marianas</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="bg-gray-50 p-6 rounded-lg shadow-md text-center">
-          <img src="/assets/guadalupe.jpg" alt="Virgen de Guadalupe" class="mx-auto mb-4 rounded-md max-w-[150px]">
-          <h3 class="text-xl font-semibold mb-2">Virgen de Guadalupe</h3>
-          <p class="text-sm">En 1531, María se apareció a San Juan Diego en México, dejando su imagen milagrosa en el tilma.</p>
-        </div>
-        <div class="bg-gray-50 p-6 rounded-lg shadow-md text-center">
-          <img src="/assets/fatima.jpg" alt="Virgen de Fátima" class="mx-auto mb-4 rounded-md max-w-[150px]">
-          <h3 class="text-xl font-semibold mb-2">Virgen de Fátima</h3>
-          <p class="text-sm">En 1917, María llamó a la oración y la conversión a tres pastorcitos en Portugal.</p>
-        </div>
-        <div class="bg-gray-50 p-6 rounded-lg shadow-md text-center">
-          <img src="/assets/lourdes.jpg" alt="Virgen de Lourdes" class="mx-auto mb-4 rounded-md max-w-[150px]">
-          <h3 class="text-xl font-semibold mb-2">Virgen de Lourdes</h3>
-          <p class="text-sm">En 1858, María se apareció a Santa Bernadette, pidiendo penitencia y oración.</p>
-        </div>
-      </div>
-    </div>
+  <section id="apariciones">
+    <h2>Apariciones Marianas</h2>
+    <p>Conoce las apariciones de la Virgen en Guadalupe, Fátima y Lourdes.</p>
+    <img src="assets/guadalupe.jpg" alt="Guadalupe" width="150">
+    <img src="assets/fatima.jpg" alt="Fátima" width="150">
+    <img src="assets/lourdes.jpg" alt="Lourdes" width="150">
   </section>
-
-  <!-- Sección: Plan Mariano -->
-  <section id="plan-mariano" class="py-12 px-4 md:px-8">
-    <div class="max-w-4xl mx-auto text-center">
-      <h2 class="text-3xl font-bold text-blue-800 mb-6">Un Plan Mariano para tu Vida</h2>
-      <p class="text-lg mb-6">Vive cada día con María, siguiendo su ejemplo de humildad, oración y entrega a Dios.</p>
-      <ul class="text-left max-w-2xl mx-auto space-y-4">
-        <li class="flex items-start">
-          <span class="text-blue-600 mr-2">•</span>
-          <span><strong>Consagración diaria:</strong> Reza una oración mariana al despertar, como el "Ave María Purísima".</span>
-        </li>
-        <li class="flex items-start">
-          <span class="text-blue-600 mr-2">•</span>
-          <span><strong>Reza el Rosario:</strong> Dedica al menos un misterio al día para meditar en la vida de Jesús.</span>
-        </li>
-        <li class="flex items-start">
-          <span class="text-blue-600 mr-2">•</span>
-          <span><strong>Actos de caridad:</strong> Haz una obra de misericordia en nombre de María, como ayudar a alguien necesitado.</span>
-        </li>
-        <li class="flex items-start">
-          <span class="text-blue-600 mr-2">•</span>
-          <span><strong>Lee la Palabra:</strong> Reflexiona sobre pasajes marianos, como la Anunciación (Lucas 1:26-38).</span>
-        </li>
-      </ul>
-      <img src="/assets/plan-mariano.jpg" alt="Plan Mariano" class="mx-auto my-6 rounded-lg shadow-md max-w-xs">
-    </div>
+  <section id="plan-mariano">
+    <h2>Plan Mariano</h2>
+    <p>Un camino de oración y devoción para vivir con María.</p>
+    <img src="assets/plan-mariano.jpg" alt="Plan Mariano" width="200">
   </section>
-
-  <!-- Pie de página -->
-  <footer class="bg-blue-800 text-white py-8 text-center">
+  <section id="reflexion-diaria">
+    <h2>Reflexión Diaria</h2>
+    <p><a href="/reflexiones.html">Ver la Reflexión Mariana Diaria</a></p>
+    <!-- Opcional: Mostrar reflexión directamente -->
+    <p id="reflection" style="display: none;"></p>
+    <script>
+      // Opcional: Cargar reflexión directamente en index.html
+      fetch('/api/reflection')
+        .then(response => response.json())
+        .then(data => {
+          const reflection = document.getElementById('reflection');
+          reflection.textContent = data.reflection;
+          reflection.style.display = 'block';
+        })
+        .catch(error => {
+          document.getElementById('reflection').textContent = 'Error al cargar la reflexión.';
+        });
+    </script>
+  </section>
+  <footer>
     <p>&copy; 2025 Corazones de María. Todos los derechos reservados.</p>
-    <p class="mt-2">"Por María a Jesús" - Encomendamos este sitio al Corazón Inmaculado de María.</p>
   </footer>
 </body>
 </html>
