@@ -8,7 +8,7 @@
     body { font-family: Arial, sans-serif; margin: 0; padding: 0; text-align: center; }
     header { background-color: #f0f8ff; padding: 20px; display: flex; flex-direction: column; align-items: center; }
     .header-container { display: flex; align-items: center; justify-content: center; gap: 20px; width: 100%; max-width: 800px; }
-    .header-container img.logo { height: 50px; width: auto; }
+    .header-container img.logo { height: 100px; width: auto; }
     .header-container h1 { margin: 0; color: #2b3a67; font-size: 2em; }
     nav { margin-top: 10px; }
     nav ul { list-style: none; padding: 0; margin: 0; display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; }
@@ -22,6 +22,7 @@
     a:hover { text-decoration: underline; }
     @media (max-width: 600px) {
       .header-container { flex-direction: column; gap: 10px; }
+      .header-container img.logo { height: 70px; }
       nav ul { flex-direction: column; gap: 10px; }
     }
   </style>
@@ -43,39 +44,4 @@
   <section id="rosario">
     <h2>El Santo Rosario</h2>
     <p>Reza el Rosario para acercarte a Jesús a través de María.</p>
-    <img src="assets/rosario.jpg" alt="Rosario" width="200">
-  </section>
-  <section id="apariciones">
-    <h2>Apariciones Marianas</h2>
-    <p>Conoce las apariciones de la Virgen en Guadalupe, Fátima y Lourdes.</p>
-    <img src="assets/guadalupe.jpg" alt="Guadalupe" width="150">
-    <img src="assets/fatima.jpg" alt="Fátima" width="150">
-    <img src="assets/lourdes.jpg" alt="Lourdes" width="150">
-  </section>
-  <section id="plan-mariano">
-    <h2>Plan Mariano</h2>
-    <p>Un camino de oración y devoción para vivir con María.</p>
-    <img src="assets/plan-mariano.jpg" alt="Plan Mariano" width="200">
-  </section>
-  <section id="reflexion-diaria">
-    <h2>Reflexión Diaria</h2>
-    <p><a href="/reflexiones.html">Ver la Reflexión Mariana Diaria</a></p>
-    <p id="reflection" style="display: none;"></p>
-    <script>
-      fetch('/api/reflection')
-        .then(response => response.json())
-        .then(data => {
-          const reflection = document.getElementById('reflection');
-          reflection.textContent = data.reflection;
-          reflection.style.display = 'block';
-        })
-        .catch(error => {
-          document.getElementById('reflection').textContent = 'Error al cargar la reflexión.';
-        });
-    </script>
-  </section>
-  <footer>
-    <p>© 2025 Corazones de María. Todos los derechos reservados.</p>
-  </footer>
-</body>
-</html>
+    <img src
