@@ -6,19 +6,39 @@
   <title>Corazones de María</title>
   <style>
     body { font-family: Arial, sans-serif; margin: 0; padding: 0; text-align: center; }
-    header { background-color: #f0f8ff; padding: 20px; }
-    header img { max-width: 100%; height: auto; }
+    header { background-color: #f0f8ff; padding: 20px; display: flex; flex-direction: column; align-items: center; }
+    .header-container { display: flex; align-items: center; justify-content: center; gap: 20px; width: 100%; max-width: 800px; }
+    .header-container img.logo { height: 50px; width: auto; }
+    .header-container h1 { margin: 0; color: #2b3a67; font-size: 2em; }
+    nav { margin-top: 10px; }
+    nav ul { list-style: none; padding: 0; margin: 0; display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; }
+    nav ul li { margin: 0; }
+    nav ul li a { color: #4a4a8a; text-decoration: none; font-weight: bold; padding: 8px 16px; }
+    nav ul li a:hover { text-decoration: underline; background-color: #e6f0fa; border-radius: 5px; }
     section { padding: 20px; }
     h2 { color: #4a4a8a; }
     footer { background-color: #f0f8ff; padding: 10px; margin-top: 20px; }
     a { color: #4a4a8a; text-decoration: none; font-weight: bold; }
     a:hover { text-decoration: underline; }
+    @media (max-width: 600px) {
+      .header-container { flex-direction: column; gap: 10px; }
+      nav ul { flex-direction: column; gap: 10px; }
+    }
   </style>
 </head>
 <body>
   <header>
-    <h1>Corazones de María</h1>
-    <img src="assets/virgen-maria.jpg" alt="Virgen María" width="300">
+    <div class="header-container">
+      <img src="assets/logo.jpg" alt="Logo Corazones de María" class="logo">
+      <h1>Corazones de María</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#rosario">Rosario</a></li>
+        <li><a href="#apariciones">Apariciones</a></li>
+        <li><a href="#plan-mariano">Plan Mariano</a></li>
+      </ul>
+    </nav>
   </header>
   <section id="rosario">
     <h2>El Santo Rosario</h2>
@@ -40,10 +60,8 @@
   <section id="reflexion-diaria">
     <h2>Reflexión Diaria</h2>
     <p><a href="/reflexiones.html">Ver la Reflexión Mariana Diaria</a></p>
-    <!-- Opcional: Mostrar reflexión directamente -->
     <p id="reflection" style="display: none;"></p>
     <script>
-      // Opcional: Cargar reflexión directamente en index.html
       fetch('/api/reflection')
         .then(response => response.json())
         .then(data => {
@@ -57,7 +75,7 @@
     </script>
   </section>
   <footer>
-    <p>&copy; 2025 Corazones de María. Todos los derechos reservados.</p>
+    <p>© 2025 Corazones de María. Todos los derechos reservados.</p>
   </footer>
 </body>
 </html>
